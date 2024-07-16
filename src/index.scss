@@ -1,0 +1,45 @@
+@import './styles/_variables.scss';
+:root {
+  width: 100%;
+  height: 100%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+html, body, #root {
+  font-family: 'Inter';
+  width: 100%;
+  height: 100%;
+
+}
+
+button{
+  border-radius: $border-radius;
+  width: 15rem;
+  height: 5rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+
+  &.button-blue{
+    background-color: $accent-color-2;
+    color: $secondary-color;
+
+    &:hover{
+      background-color:$accent-color-2-hover;
+    }
+  }
+
+  &.button-white{
+    background-color: $secondary-color;
+    color: $primary-color;
+    
+    &:hover{
+      background-color: $secondary-color-hover;
+    }
+  }
+} 
+
