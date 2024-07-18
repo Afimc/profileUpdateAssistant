@@ -9,7 +9,7 @@
     height: 100%;
     background-color: $primary-color;
     color: $secondary-color;
-    gap:2rem;
+    gap: 2rem;
 
     .h2-wrapper{
         width: 100%;
@@ -36,22 +36,11 @@
     }
 }
 
-@media screen and (max-width: 900px) {
-    .App{
-        .logo{
-            transform: scale(0.5);
-        }
+
+@media screen and (max-width: 650px) {
+    .buttons {
+        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 650px) {
-  .App{
-    .logo{
-        transform: scale(0.3);
-    }
-      .buttons {
-          flex-direction: column;
-      }
-  }
-}
 

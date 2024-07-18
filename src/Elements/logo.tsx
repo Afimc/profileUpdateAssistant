@@ -1,8 +1,6 @@
-
 import './logo.scss';
-import { TLogoSize } from '../defenitions/types';
+import { ILogoProps } from '../types/types';
 
-interface ILogoProps {logoSize:TLogoSize}
 function Logo(props:ILogoProps) {
     console.log(props)
   return (

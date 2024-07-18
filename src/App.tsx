@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.scss'
 import NewProfilePage from './pages/newProfilePage';
 import Logo from './Elements/logo';
-import { TLogoSize, TSwitch } from './defenitions/types';
+import { TLogoSize, TSwitch } from './types/types';
+import UpdateProfile from './pages/updateProfile';
 
 function App() {
   const [pageSwitch, setPageSwitch] = useState<TSwitch>('AppPage')
@@ -18,13 +19,14 @@ function App() {
         </div>
         <div className="buttons">
           <button className='button-blue' onClick={()=>setPageSwitch('NewProfilePage')}>New Profile</button>
-          <button className='button-white' onClick={()=>setPageSwitch('EditProfilePage')}>Update</button>
+          <button className='button-white' onClick={()=>setPageSwitch('UpdateProfilePage')}>Update</button>
         </div>
       </div>
-      :
-      pageSwitch==='NewProfilePage'
+      : pageSwitch==='NewProfilePage'
       ? <NewProfilePage />
-      : <p>heloo</p>
+      : pageSwitch==='UpdateProfilePage'
+      ?<UpdateProfile />
+      :<App/>
   )
 }
 

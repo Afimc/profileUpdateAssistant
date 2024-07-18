@@ -67,3 +67,18 @@
         }
     }
 }
+@media screen and (max-width: 900px) {
+    .App{
+        .big-logo{
+            transform: scale(0.5);
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .App{
+      .big-logo{
+          transform: scale(0.3);
+      }
+    }
+}

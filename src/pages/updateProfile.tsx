@@ -1,22 +1,21 @@
 import { TLogoSize, TSwitch } from '../types/types'
 import Logo from '../Elements/logo'
-import './newProfilePage.scss'
+import './updateProfile.scss'
 import { useState } from 'react'
 import Result from './result'
-import { MD } from '../MD'
 
-function NewProfilePage() {
-    const [pageSwitch, setPageSwitch] = useState<TSwitch>('NewProfilePage')
+function UpdateProfile() {
+    const [pageSwitch, setPageSwitch] = useState<TSwitch>('UpdateProfilePage')
     const logoSize:TLogoSize = 'smallLogo'
-    const resultData = MD
+
   return (
-    pageSwitch==='NewProfilePage'
-      ?<div className='newProfilePage'>
+    pageSwitch==='UpdateProfilePage'
+      ?<div className='updateProfile'>
         <div className="top-div">
             <Logo logoSize={logoSize}/>
         </div>
         <div className="bottom-div">
-            <h4>Fill the fields as detailed as possible for more accurate AI-generated results.</h4>
+            <h4>Fill the fields with your profile details for accurate AI-generated update.</h4>
             <div className="input">
                 <input className='small-input' placeholder="Your name here ..."/>
                 <input className='small-input' placeholder="Type your specialtie here ..."/>
@@ -28,10 +27,10 @@ function NewProfilePage() {
             <button onClick={()=>setPageSwitch('Result')}>GO</button>
         </div>
       </div>
-      :<Result resultData={resultData} />
+      :<Result />
   )
 }
 
-export default NewProfilePage
+export default UpdateProfile
 
 
