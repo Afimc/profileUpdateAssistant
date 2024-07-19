@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+.step{
+    width: 75%;
+    .title{
+        width: 100%;
+        background-color: #2b6dd18d;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        input{
+            width: 3%;
+        }
+    }
+
+    .description{
+        width: 100%;
+        padding: 1rem;
+        background-color: $accent-color-2;
+        font-size: 1.2rem;
+
+    }
+    .descriptionHiden{
+        height: 0;
+        overflow: hidden;
+    }
+    
+}

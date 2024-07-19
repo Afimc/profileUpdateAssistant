@@ -1,5 +1,5 @@
 import './logo.scss';
-import { ILogoProps } from '../types/types';
+import { ILogoProps } from '../core/types';
 
 function Logo(props:ILogoProps) {
     console.log(props)

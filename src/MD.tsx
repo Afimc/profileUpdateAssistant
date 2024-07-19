@@ -1,4 +1,6 @@
-export const MD = {
+import { IData } from "./core/types";
+
+export const MD:IData = {
     generalSteps: [ 
         { 
             title: 'Gain “Verified” Badge',
@@ -18,5 +20,5 @@ export const MD = {
         },
     ],
     profileDescription: 'Software Engineer | Full Stack Developer Crafting seamless, intuitive web solutions that captivate users and foster growth.Driven by a passion for delivering top-notch results and a commitment to client satisfactionNot a fit for all' ,
-
+    proposalsExample: 'Software Engineer | Full Stack Developer Crafting seamless, intuitive web solutions that captivate users and foster growth.Driven by a passion for delivering top-notch results and a commitment to client satisfactionNot a fit for all' ,
 }
