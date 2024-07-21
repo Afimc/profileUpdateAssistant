@@ -8,12 +8,12 @@ interface IStepProps {
 };
 
 function Step(props:IStepProps) {
-    const [isDescriptionHidden, setDescriptionHidden] = useState(true)
+    const [isDescriptionHidden, setDescriptionHidden] = useState(true);
     const [isChecked, setChecked] = useState(false);
-    const setIsChecked = dataStore((state)=>state.setIsChecked)
+    const setIsChecked = dataStore((state)=>state.setIsChecked);
     const onCheck = () => {
-        setChecked(!isChecked)
-        setIsChecked(props.title,!isChecked)
+        setChecked(!isChecked);
+        setIsChecked(props.title,!isChecked);
     }
     return (
         <div className='step'>

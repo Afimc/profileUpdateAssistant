@@ -39,10 +39,10 @@ function getData() {
 //   //   model: 'test'
 //   // })
 //   // console.log(completion)
-//   axios.get('https://api.openai.com/v2/chat/completions', {headers: {
+//   axios.get('https://api.openai.com/v1/chat/completions', {headers: {
 //     'Content-Type': 'application/json',
 //     'Authorization': 'Bearer '+apiKey,
-//     'OpenAI-Beta': 'assistants=v2',
+//     'OpenAI-Beta': 'assistants=v1',
 //   }})
 // }
 
