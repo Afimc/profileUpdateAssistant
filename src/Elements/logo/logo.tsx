@@ -1,8 +1,11 @@
 import './logo.scss';
-import { ILogoProps } from '../core/types';
+import { TLogoSize } from '../../core/types';
+
+interface ILogoProps{
+  logoSize:TLogoSize
+}
 
 function Logo(props:ILogoProps) {
-    console.log(props)
   return (
     <div className={props.logoSize==='bigLogo'?"big-logo":'small-logo'}>
         <div className="left">UP</div>

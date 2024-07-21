@@ -1,21 +1,21 @@
-import './resultSection.scss'
+import './resultSection.scss';
 
 interface IResultProps {
-    title:string,
-    children: React.ReactNode
-}
+    title: string,
+    children: React.ReactNode,
+    onRegenerate:()=>void,
+};
 
-function ResultSection(props:IResultProps) {
-    
+function ResultSection(props: IResultProps) {
     return (
         <div className='resultSection'>
             <div className="title-wrapper">
                 <span className='title'>{props.title}</span>
-                <button>re-generate</button>
+                <button onClick={()=>{props.onRegenerate()}}>Re-generate</button>
             </div>
             {props.children}    
-    </div>
-    );
+        </div>
+    )
   }
   
   export default ResultSection;

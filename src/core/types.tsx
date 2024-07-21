@@ -1,13 +1,14 @@
 export type TLogoSize = 'bigLogo' | 'smallLogo';
 export interface IStep {
-    title:string,
-    description:string,
+    title: string,
+    description: string,
+    isChecked?: boolean,
 }
 
 export interface IData {
     generalSteps: IStep[],
     profileDescription: string,
-    proposalsExample:string,
+    proposalsExample: string,
 }
 
 export interface IDataStore {
@@ -16,4 +17,5 @@ export interface IDataStore {
 
     setLoadingData: (s: boolean) => void,
     setResultData: (s: IData | null) => void,
+    setIsChecked: (title: string, isChecked: boolean) => void;
 }

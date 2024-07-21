@@ -19,11 +19,13 @@
     }
 
     button{
-      width: 10rem;
-      height: 50px;
-      margin-right: 1.5rem;
-      
-      
+      width: 9.5rem;
+      height: 45px;
+      margin-right: 1.4rem;
+      font-size: 24px;
+      background-color: $primary-color;
+      color: $accent-color;
+      border: none;
     }
   }
 

@@ -23,7 +23,9 @@
         justify-content: center;
         width: 70%;
         gap: 1rem;
-
+        span{
+            color: red;
+        }
         h4, .small-input, .big-input{
             color: $secondary-color;
             font-family: $primary-text-font;
@@ -61,14 +63,16 @@
                 resize: none;
             }
         }
+        .buttons{
+            display: flex;
+            gap: 2rem;
+            button{
+                width: 200px;
+                height: 60px;
+                margin-bottom: 50px;
+ 
+            } 
 
-        button{
-            width: 200px;
-            height: 60px;
-            margin-bottom: 50px;
-            background: $accent-color-2;
-            color: $secondary-color;
-            border-radius: $border-radius;
-        } 
+        }
     }
 }

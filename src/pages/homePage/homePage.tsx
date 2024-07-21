@@ -1,12 +1,11 @@
-import './homePage.scss'
+import './homePage.scss';
 import Logo from '../../Elements/logo/logo';
 import { TLogoSize } from '../../core/types';
 import { useNavigate } from 'react-router-dom';
 
-
 function HomePage() {
   const logoSize:TLogoSize = 'bigLogo';
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
       <div className='App'>
         <Logo logoSize={logoSize}/>
@@ -23,4 +22,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default HomePage;

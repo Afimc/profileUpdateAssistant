@@ -7,11 +7,11 @@ export const MD:IData = {
             description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore nulla cum architecto ipsa voluptates blanditiis laborum magnam exercitationem odit ut amet aliquid, repellat placeat quo debitis voluptatem eveniet porro.',
         },
         { 
-            title: 'Gain “Verified” Badge',
+            title: 'Gain “Diferent” Badge',
             description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore nulla cum architecto ipsa voluptates blanditiis laborum magnam exercitationem odit ut amet aliquid, repellat placeat quo debitis voluptatem eveniet porro.',
         },
         { 
-            title: 'Gain “Verified” Badge',
+            title: 'Gain “Another” Badge',
             description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore nulla cum architecto ipsa voluptates blanditiis laborum magnam exercitationem odit ut amet aliquid, repellat placeat quo debitis voluptatem eveniet porro.',
         },
         { 
