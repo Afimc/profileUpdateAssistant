@@ -9,8 +9,6 @@ import Logo from "../../Elements/logo/logo";
 import axios from "axios";
 import OpenAI from "openai";
 
-
-
 function getData() {
   return new Promise<{ data?: any, errorMsg?: string }>((resolve, reject) => {
     const time = Math.random() * 1000;
@@ -46,12 +44,11 @@ function getData() {
 //   }})
 // }
 
-
 function NewProfilePage() {
   const setResultData = dataStore((state)=> state.setResultData);
   const setLoadingData = dataStore((state) => state.setLoadingData);
   const loadingData = dataStore((state) => state.loadingData);
-  const [errorMsg, setErrorMsg] = useState('')
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     specialty: '',
@@ -68,20 +65,20 @@ function NewProfilePage() {
   };
 
   const onButtonClick = () => {
-    console.log(formData)
+    console.log(formData);
     setLoadingData(true);
     getData()
-      // .then((result) => {
-      //   setResultData(result.data);
-      //   navigate("/result");
-      //   setLoadingData(false);
-      // })
-      // .catch((error) => {
-      //   console.log(error.errorMsg);
-      //   setErrorMsg(error.errorMsg)
-      //   setResultData(null);
-      //   setLoadingData(false);
-      // });
+      .then((result) => {
+        setResultData(result.data);
+        navigate("/result");
+        setLoadingData(false);
+      })
+      .catch((error) => {
+        console.log(error.errorMsg);
+        setErrorMsg(error.errorMsg);
+        setResultData(null);
+        setLoadingData(false);
+      });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -97,7 +94,7 @@ function NewProfilePage() {
       <LoadingSpinner />
     </div>
   ) : (
-    <div className="newProfilePage" onClick={()=>handleClick()}>
+    <div className="newProfilePage" onClick={() => handleClick()}>
       <div className="top-div">
         <Logo logoSize={logoSize} />
       </div>

@@ -4,7 +4,7 @@ import { TLogoSize } from '../../core/types';
 import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
-  const logoSize:TLogoSize = 'bigLogo';
+  const logoSize: TLogoSize = 'bigLogo';
   const navigate = useNavigate();
   return (
       <div className='App'>
@@ -14,8 +14,8 @@ function HomePage() {
           <div className="line"></div>
         </div>
         <div className="buttons">
-          <button className='button-blue' onClick={()=>navigate('./newProfilePage')}>Lets Start</button>
-          <button className='button-white' onClick={()=>navigate('./newProfilePage')}>Lets Start</button>
+          <button className='button-blue' onClick={() => navigate('./newProfilePage')}>Lets Start</button>
+          <button className='button-white' onClick={() => navigate('./newProfilePage')}>Lets Start</button>
         </div>
       </div>
 

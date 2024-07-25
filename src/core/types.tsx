@@ -1,4 +1,5 @@
 export type TLogoSize = 'bigLogo' | 'smallLogo';
+
 export interface IStep {
     title: string,
     description: string,
