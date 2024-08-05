@@ -1,22 +1,22 @@
 import "./newProfilePage.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { MD } from "../../MD";
+// import { MD } from "../../MD";
 import { dataStore } from "../../core/store";
 import { TLogoSize } from "../../core/types";
 import LoadingSpinner from "../../Elements/loadingSpinner/loadingSpinner";
 import Logo from "../../Elements/logo/logo";
+import { getData } from "../../core/api";
 
-
-function getData() {
-  return new Promise<{ data?: any, errorMsg?: string }>((resolve, reject) => {
-    const time = Math.random() * 1000;
-    setTimeout(() => {
-      resolve({data: MD});
-      // reject({ errorMsg: "booom" });
-    }, time);
-  });
-}
+// function getData() {
+//   return new Promise<{ data?: any, errorMsg?: string }>((resolve, reject) => {
+//     const time = Math.random() * 1000;
+//     setTimeout(() => {
+//       resolve({data: MD});
+//       // reject({ errorMsg: "booom" });
+//     }, time);
+//   });
+// }
 
 function NewProfilePage() {
   const setResultData = dataStore((state)=> state.setResultData);
@@ -41,8 +41,10 @@ function NewProfilePage() {
   const onButtonClick = () => {
     console.log(formData);
     setLoadingData(true);
-    getData()
+    const inputString = JSON.stringify(formData);
+    getData(inputString)
       .then((result) => {
+        if (!result.data) throw new Error(result.errorMsg);
         setResultData(result.data);
         navigate("/result");
         setLoadingData(false);
