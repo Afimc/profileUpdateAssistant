@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
 }
+
 html, body, #root {
   font-family: 'Inter';
   width: 100%;
@@ -29,7 +30,7 @@ button{
     color: $secondary-color;
 
     &:hover{
-      background-color:$accent-color-2-hover;
+      background-color: $accent-color-2-hover;
     }
   }
 

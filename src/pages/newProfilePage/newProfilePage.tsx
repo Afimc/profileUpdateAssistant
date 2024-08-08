@@ -21,8 +21,11 @@ import { getData } from "../../core/api";
 function NewProfilePage() {
   const setResultData = dataStore((state)=> state.setResultData);
   const setLoadingData = dataStore((state) => state.setLoadingData);
+  const setInputData = dataStore((state)=>state.setInputData)
   const loadingData = dataStore((state) => state.loadingData);
   const [errorMsg, setErrorMsg] = useState('');
+  const inputData = dataStore((state)=>state.inputData);
+
   const [formData, setFormData] = useState({
     name: '',
     specialty: '',
@@ -39,9 +42,11 @@ function NewProfilePage() {
   };
 
   const onButtonClick = () => {
-    console.log(formData);
+    console.log({inputData});
+
     setLoadingData(true);
-    const inputString = JSON.stringify(formData);
+    const inputString = JSON.stringify(inputData);
+    console.log({inputString})
     getData(inputString)
       .then((result) => {
         if (!result.data) throw new Error(result.errorMsg);
@@ -63,6 +68,7 @@ function NewProfilePage() {
       ...prevData,
       [name]: value
     }));
+    setInputData(formData)
   };
 
   return loadingData ? (

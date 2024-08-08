@@ -32,7 +32,7 @@ const getSteps = async (inputString: string): Promise<IStep[]> => {
   return stepsResult.generalSteps;
 };
 
-const getDescription = async (inputString: string): Promise<string> => {
+export const getDescription = async (inputString: string): Promise<string> => {
   const completion = await openai.chat.completions.create({
     messages: [
       {
@@ -56,7 +56,7 @@ const getDescription = async (inputString: string): Promise<string> => {
   return descriptionResultString;
 };
 
-const getProposals = async (inputString: string): Promise<string> => {
+export const getProposals = async (inputString: string): Promise<string> => {
   const completion = await openai.chat.completions.create({
     messages: [
       {
@@ -92,6 +92,8 @@ export const getData = async (
     const profileDescription = await getDescription(inputString);
     const proposalsExample = await getProposals(inputString);
     const result: IData = { generalSteps, profileDescription, proposalsExample };
+    console.log({generalSteps});
+    
     return { data: result };
     //eslint-disable-next-line
   } catch (error: any) {
