@@ -38,13 +38,14 @@
 }
 .profile-descripton, .proposals-example {
   
+  
   span {
     width: 76%;
     background-color: $secondary-color;
     color: $primary-color;
     padding-bottom: 2rem;
     margin-right: 2rem;
-    
+    border: solid 1px red;
   }
 
 }

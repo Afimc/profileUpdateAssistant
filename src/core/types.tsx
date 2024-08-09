@@ -1,4 +1,6 @@
 export type TLogoSize = 'bigLogo' | 'smallLogo';
+export type TSpinerSIze = 'bigSpiner' | 'smallSpiner';
+export type TRegenerateSectionLoading = null | 'profileDescriptionRegenerate' | 'proposalsRegenerate' | 'generalStepsRegenerate';
 
 export interface IStep {
     title: string,

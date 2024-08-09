@@ -1,15 +1,16 @@
-
+import { TSpinerSIze } from '../../core/types';
 import './loadingSpinner.scss';
 
-function LoadingSpinner() {
+interface ISpinerProps {
+  spinerSize:TSpinerSIze
+}
+ 
+function LoadingSpinner(props:ISpinerProps) {
   return (
-    <div className="spinerPage">
+    <div className={props.spinerSize==='bigSpiner'?"bigSpiner-page":'smallSpiner-page'}>
       <div className="spinner"></div>;
       <h1>Loading...</h1>
   </div>
   )
-  
-  
 }
-
 export default LoadingSpinner;

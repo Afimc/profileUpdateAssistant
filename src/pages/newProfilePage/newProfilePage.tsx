@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { MD } from "../../MD";
 import { dataStore } from "../../core/store";
-import { TLogoSize } from "../../core/types";
+import { TLogoSize, TSpinerSIze } from "../../core/types";
 import LoadingSpinner from "../../Elements/loadingSpinner/loadingSpinner";
 import Logo from "../../Elements/logo/logo";
 import { getData } from "../../core/api";
@@ -35,6 +35,7 @@ function NewProfilePage() {
     projects: ''
   });
   const logoSize: TLogoSize = "smallLogo";
+  const spinerSize: TSpinerSIze = 'bigSpiner'
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -46,7 +47,6 @@ function NewProfilePage() {
 
     setLoadingData(true);
     const inputString = JSON.stringify(inputData);
-    console.log({inputString})
     getData(inputString)
       .then((result) => {
         if (!result.data) throw new Error(result.errorMsg);
@@ -73,7 +73,7 @@ function NewProfilePage() {
 
   return loadingData ? (
     <div className="loading">
-      <LoadingSpinner />
+      <LoadingSpinner spinerSize={spinerSize}/>
     </div>
   ) : (
     <div className="newProfilePage" onClick={() => handleClick()}>
