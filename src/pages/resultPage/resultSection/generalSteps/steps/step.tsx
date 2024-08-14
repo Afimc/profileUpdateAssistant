@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './step.scss';
-import { dataStore } from '../../../../core/store';
+import { dataStore } from '../../../../../core/store';
+
 
 interface IStepProps {
     title: string,
